@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tabs</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Cherry+Swash|Padauk" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+	<section>
+		<h1>Responsive Accessible Tabs</h1>
+		<div class="gray_wrapper">
+			<div id="tabs" >
+			    <ul class="tabsList">
+			        <li class="current"><a href="#threading" id="tab-threading" aria-selected="true">Threading</a></li>
+			        <li><a href="#face" id="tab-face" aria-selected="false">Face Treatment</a></li>
+			        <li><a href="#waxing" id="tab-waxing" aria-selected="false">Waxing</a></li>
+			        <li><a href="#hand_foot" id="tab-hand_foot" aria-selected="false">Hand &amp; Foot Treatment</a></li>
+			        <li><a href="#massage" id="tab-hand_foot" aria-selected="false">Massage</a></li>
+			        <!-- <li><a href="#makeup" id="tab-hand_foot" aria-selected="false">Bridal Makeup &amp; Heena</a></li> -->
+			    </ul>
+
+				<div class="tabPanel" aria-hidden="false" aria-labelledby="tab-threading" style="display: block;">
+					<table id="threading">
+
+						<tr class="table-item">
+							<td class="title"> Eyebrows </td>
+							<td class="price"> $4 </td>
+						</tr>
+						<tr class="table-item">
+							<td class="title"> Upper Lip </td>
+							<td class="price"> $2 </td>
+						</tr>
+						<tr class="table-item">
+							<td class="title"> Chin </td>
+							<td class="price"> $3 </td>
+						</tr>
+						<tr class="table-item">
+							<td class="title"> Side Face </td>
+							<td class="price"> $5 </td>
+						</tr>
+
+					</table> <!-- end .table -->
+				</div> <!-- end .table_wrap -->
+
+				<div class="tabPanel" aria-hidden="false" aria-labelledby="tab-face" style="display: block;">
+					<table id="face">
+
+						<tr class="table-item">
+							<td class="title"> Herbal Facial </td>
+							<td class="price"> $35 </td>
+						</tr>
+						<tr class="table-item">
+							<td class="title"> Whitening </td>
+							<td class="price"> $45 </td>
+						</tr>
+						<tr class="table-item">
+							<td class="title"> Acne Facial </td>
+							<td class="price"> $40 </td>
+						</tr>
+						<tr class="table-item">
+							<td class="title"> Express Facial </td>
+							<td class="price"> $35 </td>
+						</tr>
+						<tr class="table-item">
+							<td class="title"> Bright Eyes Treatment </td>
+							<td class="price"> $50 </td>
+						</tr>
+
+					</table> <!-- end .table -->
+				</div> <!-- end .table_wrap -->
+
+				<div class="tabPanel" aria-hidden="false" aria-labelledby="tab-waxing" style="display: block;">
+					<table id="waxing">
+
+						<tr class="table-item">
+							<td class="title"> Full Legs </td>
+							<td class="price"> $30 </td>
+						</tr>
+						<tr class="table-item">
+							<td class="title"> Half Legs </td>
+							<td class="price"> $20 </td>
+						</tr>
+						<tr class="table-item">
+							<td class="title"> Bikini Line </td>
+							<td class="price"> $8 </td>
+						</tr>
+
+					</table> <!-- end .table -->
+				</div> <!-- end .table_wrap -->
+
+				<div class="tabPanel" aria-hidden="false" aria-labelledby="tab-hand_foot" style="display: block;">
+					<table id="hand_foot">
+
+						<tr class="table-item">
+							<td class="title"> Manicure </td>
+							<td class="price"> $15 </td>
+						</tr>
+						<tr class="table-item">
+							<td class="title"> Nail Polish Change </td>
+							<td class="price"> $5 </td>
+						</tr>
+						<tr class="table-item">
+							<td class="title"> Pedicure </td>
+							<td class="price"> $25 </td>
+						</tr>
+
+					</table> <!-- end .table -->
+				</div> <!-- end .table_wrap -->
+
+				<div class="tabPanel" aria-hidden="false" aria-labelledby="tab-massage" style="display: block;">
+					<table id="massage">
+
+						<tr class="table-item">
+							<td class="title"> Full Body Massage </td>
+							<td class="price"> $120 </td>
+						</tr>
+						<tr class="table-item">
+							<td class="title"> Back Massage </td>
+							<td class="price"> $40 </td>
+						</tr>
+						<tr class="table-item">
+							<td class="title"> Hot stone Back Massage </td>
+							<td class="price"> $40 </td>
+						</tr>
+						<tr class="table-item">
+							<td class="title"> Hand Massage </td>
+							<td class="price"> $30 </td>
+						</tr>
+						<tr class="table-item">
+							<td class="title"> Foot Massage </td>
+							<td class="price"> $30 </td>
+						</tr>
+
+					</table> <!-- end .table -->
+				</div> <!-- end .table_wrap -->
+
+<!-- 				<div class="tabPanel" aria-hidden="false" aria-labelledby="tab-makeup_heena" style="display: block;">
+					<table id="makeup_heena">
+						<tr class="table-item">
+							<td class="title"> Praesent volutpat </td>
+							<td class="price"> $15 </td>
+						</tr>
+						<tr class="table-item">
+							<td class="title"> Sadipscing elitr, sed diam </td>
+							<td class="price"> $5 </td>
+						</tr>
+						<tr class="table-item">
+							<td class="title"> Prompta eleifend pertinacia </td>
+							<td class="price"> $35 </td>
+						</tr>
+						<tr class="table-item">
+							<td class="title"> Curabitur </td>
+							<td class="price"> $25 </td>
+						</tr>
+
+					</table> end .table
+				</div> end .table_wrap  -->
+						
+			</div> <!-- end #tabs -->
+		</div> <!-- end .gray_wrapper -->
+
+	</section> <!-- end section -->
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+/*--------------------------------------------------------------
+General style
+--------------------------------------------------------------*/
+
+html {
+  box-sizing: border-box;
+  
+}
+
+body {
+  margin: 0;
+  color: #262726;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+section {
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+  background: #f2f2f2 url(images/pattern.png) repeat;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Padauk', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #CF0872;
+}
+
+/*--------------------------------------------------------------
+Tabs style
+--------------------------------------------------------------*/
+#tabs {
+  max-width: 65em;
+  margin: 0 auto;
+}
+#tabs h2 {
+  margin: 1em 0 0;
+}
+#tabs h2:focus {
+  outline: 0;
+  /* If you're removing the outline, you must add something as good or better! */
+  text-decoration: underline;
+}
+ul.tabsList {
+  padding-left: 0;
+}
+.tabsList {
+  font-family: 'Cherry Swash', cursive;
+  font-size: 1.2em;
+  list-style: none;
+  margin: 0;
+  padding-left: 2.35em;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+.tabsList li {
+  position: relative;
+  /*for z-index*/
+  float: left;
+  margin: 0 .5em 0 0;
+  z-index: 1;
+  border-bottom: 1px solid #b3b3b3;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.tabsList li:last-child {
+  border-bottom: none;
+}
+
+
+.tabsList li a {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  font-weight: normal;
+  text-shadow: none;
+  letter-spacing: 1px;
+  color: #444;
+  text-decoration: none;
+  margin: .5em 0 0;
+  padding: .5em .5em .35em;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+.tabsList li a:link {
+  border-color: #ccc;
+}
+.tabsList li a:hover,
+.tabsList li a:focus,
+.tabsList li a:active {
+  color: #f30985;
+}
+.tabsList li a:active {
+  top: 2px;
+}
+.tabsList li.current {
+  z-index: 10;
+  border-bottom: 3px solid #f30985;
+}
+.tabsList li.current a {
+  top: 2px;
+  font-weight: bold;
+  color: #f30985;
+}
+.tabsList li:last-child:after {
+  content: none;
+}
+.tabsList li.current a:hover,
+.tabsList li.current a:focus {
+  color: #f30985;
+}
+.tabsList li.current a:focus {
+  outline: 1px dotted #444;
+}
+.tabsList a span {
+  position: absolute;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+.tabPanel {
+  font-family: 'Padauk', sans-serif;
+  font-size: 1.2em;
+  max-width: 50em;
+  margin: 0 auto;
+  position: relative;
+  /*for z-index*/
+  display: block;
+  visibility: visible;
+  clear: left;
+  overflow: auto;
+  padding: .5em 1em 2em;
+  z-index: 5;
+  background-color: rgba(233, 226, 231, 0.8);
+}
+.tabPanel:focus {
+  outline: 1px dotted #999;
+}
+.tabPanel h2 {
+  display: inline-block;
+}
+.tabPanel h2:focus {
+  outline: 1px dotted #999;
+}
+.table-item {
+  border-bottom: 2px solid white;
+  margin: 10px 10px;
+  height: 50px;
+}
+.title {
+  padding-left: 20px;
+}
+.price {
+  max-width: 10px;
+  text-align: center;
+  padding-right: 20px;
+}
+
+
+/*--------------------------------------------------------------
+Media Queries
+--------------------------------------------------------------*/
+@media screen and (min-width: 580px) {
+  #tabs {
+    width: 60%;
+  }
+  .tabsList li {
+    width: 100%;
+  }
+} /* end min-width: 580px */
+
+@media screen and (min-width: 1000px) {
+  .gray_wrapper {
+    min-height: 500px;
+  }
+  #tabs {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .tabPanel {
+    width: 70%;
+  }
+  .tabsList {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 2px solid #262726;
+  }
+  .tabsList li:after {
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: 20px;
+    width: 2px;
+    height: 20px;
+    background: #211e23;
+    transform: rotate(45deg);
+  }
+  .tabsList li a {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    font-weight: normal;
+    text-shadow: none;
+    letter-spacing: 1px;
+    color: #444;
+    text-decoration: none;
+    margin: .5em 0 0;
+    padding: .5em .5em .35em;
+    cursor: pointer;
+    width: auto;
+    text-align: left;
+  }
+  .tabsList li {
+    width: auto;
+    text-align: center;
+    border-bottom: none;
+  }
+  .tabsList li.current {
+    border: none;
+  }
+} /* end min-width: 1000px */
+
+/** {
+  border: 1px solid black;
+}*/
